@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Survey_Result</title>
+</head>
+<body>
+    <div id="result_container">
+    <div id="result_decoration"></div>
+        <h1 id="result_title">Submitted Info</h1>
+        <div id="info_wrapper">
+            <div id="info_tag">
+                <p>Name:</p>
+                <p>Dojo Location:</p>
+                <p>Favorite Language:</p>
+                <p>Comment:</p>
+            </div>
+            <div id="info_output">
+                <p>{{ name }}</p>
+                <p>{{ location }}</p>
+                <p>{{ language }}</p>
+                <p>{{ comment }}</p>
+            </div>
+        </div>
+        <form action="{{ url_for('destroy_session') }}" method="get">
+            <button id="goBack", type="submit">Go Back</button>
+        </form>
+    </div>
+</body>
+</html>

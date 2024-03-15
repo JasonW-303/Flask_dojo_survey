@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Survey_Form</title>
+</head>
+
+<body>
+    <div id="container">
+    <div id="survey_decoration"></div>
+        <form action="/process" method="post">
+            <div id="name_container">
+                <label for="name">Your Name:</label>
+                <input id="name_field" type="text" , name="name" , id="name", placeholder="first last">
+            </div>
+            <div id="location_container">
+                <label for="location">Dojo Location:</label>
+                <select id="locationSelect" name="location" id="location">
+                    <option value="None Chosen">Select</option>
+                    <option value="AZ">AZ</option>
+                    <option value="CO">CO</option>
+                    <option value="WA">WA</option>
+                </select>
+            </div>
+            <div id="language_container">
+                <label for="language">Favorite Language:</label>
+                <select id="languageSelect" name="language" id="language">
+                    <option value="None Chosen">Select</option>
+                    <option value="HTML">HTML</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="Python">Python</option>
+                </select>
+            </div>
+            <div id="comment_container">
+                <label for="comment">Comment (optional):</label>
+                <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+            </div>
+            <button id="submitButton" type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>
